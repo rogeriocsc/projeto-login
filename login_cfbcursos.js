@@ -135,7 +135,6 @@ class Login{
                 this.nomelogado=null;
                 this.acessologado=null;
                 this.callback_naook();
-                this.fechar();
             }
         })
     }
