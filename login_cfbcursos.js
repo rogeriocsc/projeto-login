@@ -128,14 +128,13 @@ class Login{
                 this.nomelogado=res.nome;
                 this.acessologado=res.acesso;
                 this.callback_ok();
-                
+                this.fechar();
             }else{
                 this.logado=false;
                 this.matlogado=null;
                 this.nomelogado=null;
                 this.acessologado=null;
                 this.callback_naook();
-                this.fechar();
             }
         })
     }
