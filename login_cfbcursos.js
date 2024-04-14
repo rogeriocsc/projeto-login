@@ -7,16 +7,13 @@ class Login{
     static callback_ok=null;
     static callback_naook=null;
     static config={
-        cor:"048",
-        img:"logo_cfbcursos.png"
+        cor:null,//048
+        img:null,
+        endpoint:null,//http://127.0.0.1:8080/
     };
-
-    static endpoint="http://127.0.0.1:8080/";
     
-    static login=(callback_ok,callback_naook,config=null)=>{
-        if (config!=null) {
-           this.config=config; 
-        }
+    static login=(callback_ok,callback_naook,config)=>{
+        this.config=config;
         this.callback_ok=()=>{callback_ok()};
         this.callback_naook=()=>{callback_naook()};
         this.estilocss=
@@ -117,23 +114,23 @@ class Login{
     static verificaLogin=()=>{
         const mat=document.querySelector("#f_username").value;
         const pas=document.querySelector("#f_senha").value;
-        const endpoint=`http://127.0.0.1:8080/?matricula=${mat}&senha=${pas}`;
+        const endpoint=`${this.config.endpoint}/?matricula=${mat}&senha=${pas}`;
         fetch(endpoint)
         .then(res=>res.json())
         .then(res=>{
             // console.log(res)
             if (res) {
-                this.logado=true;
-                this.matlogado=mat;
-                this.nomelogado=res.nome;
-                this.acessologado=res.acesso;
+                sessionStorage.setItem("logado","true");
+                sessionStorage.setItem("matlogado",mat);
+                sessionStorage.setItem("nomelogado",res.nome);
+                sessionStorage.setItem("acessologado",res.acesso);
                 this.callback_ok();
                 this.fechar();
             }else{
-                this.logado=false;
-                this.matlogado=null;
-                this.nomelogado=null;
-                this.acessologado=null;
+                sessionStorage.setItem("logado","false");
+                sessionStorage.setItem("matlogado","");
+                sessionStorage.setItem("nomelogado","");
+                sessionStorage.setItem("acessologado","");
                 this.callback_naook();
             }
         })
@@ -145,4 +142,33 @@ class Login{
         id_estiloLogin.remove();
     }
 }
+/* Exemplo de API */
+// API deverá retornar nome e acesso caso login seja
+// efetuado com sucesso.
+// API deverá retornar null caso login não seja efetuado.
+// var http = require('http');
+// var url = require('url');
+// http.createServer(function(req, res){
+//     res.setHeader('Access-Control-Allow-Origin','*');
+//     res.writeHead(200, { 'Content-Type': 'application/json'});
+
+//     let parametros=url.parse(req.url,true);
+
+//     let mat=parametros.query.matricula;
+//     let pas=parametros.query.senha;
+
+//     let dados=null
+
+//     if (mat=="123" && pas=="321") {
+//         dados = {
+//             nome: "Rogerio",
+//             acesso:10
+//         }
+//     }
+//     res.end(JSON.stringify(dados));
+// }).listen(8080);
+// https://loginv1.cfbcursos.repl.co/?matricula=123&senha=321
+// exemplo de chamada
+// http://127.0.0.1:8080/?matricula=123&senha=321
+
 // export {Login};
