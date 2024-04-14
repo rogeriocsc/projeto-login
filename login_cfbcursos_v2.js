@@ -13,6 +13,10 @@ class Login{
     };
     
     static login=(callback_ok,callback_naook,config)=>{
+        sessionStorage.setItem("logado","false");
+        sessionStorage.setItem("matlogado","");
+        sessionStorage.setItem("nomelogado","");
+        sessionStorage.setItem("acessologado","");
         this.config=config;
         this.callback_ok=()=>{callback_ok()};
         this.callback_naook=()=>{callback_naook()};
@@ -96,6 +100,10 @@ class Login{
         btn_cancelar.setAttribute("id","btn_cancelar");
         btn_cancelar.innerHTML="Cancelar";
         btn_cancelar.addEventListener("click",(evt)=>{
+            sessionStorage.setItem("logado","false");
+            sessionStorage.setItem("matlogado","");
+            sessionStorage.setItem("nomelogado","");
+            sessionStorage.setItem("acessologado","");
             this.fechar();
         });
         botoesLogin.appendChild(btn_cancelar);
