@@ -1,6 +1,6 @@
 Sobre
 ___
 Projeto Login<br>
-Disponibilizando conteúdo via CDN <br>
+<br>
 * [x] Módulo tela de login
 
