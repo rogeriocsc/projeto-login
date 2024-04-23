@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fundo-login{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.base-login{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.elementos-login{
+    width: 34%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    float: left;
+}
+.logo-login{
+    width: 40%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(253, 6, 6);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    float: right;
+}
+.logo-login img{
+    border-radius: 10px;
+}
+.campo-login {
+    margin-bottom: 1em;
+}
+.campo-login label {
+	margin-bottom: 0.5em;
+	color: #191970;
+	font-size: 1em;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+	display: block;
+}
+.campo-login input[type="text"], .campo-login input[type="password"]{
+	padding: 0.6em;
+	border: 2.02px solid grey;
+    width: 200px;
+	border-radius: 10px;
+    outline: none;
+}
+.campo-login input:focus{
+    background-color: #E0E0F8;;
+}
+.btn_login{
+    padding: 10px;
+    margin: 5px 4px;
+    width: 100px;
+    background-color: #048;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: .4s;
+    border: none;
+}
+.btn_login:hover{
+    background-color: rgb(33, 113, 194);
+}
+/* @media screen max */
+@media screen and (max-width: 970px) {
+    .elementos-login{
+        width: 40%;
+        height: 350px;
+    }
+    .logo-login{
+        width: 45%;
+        height: 350px;
+    }
+    .logo-login img{
+        width: 150px;
+        height: 150px;
+    }
+}
+/* @media screen max */
+@media screen and (max-width: 770px) {
+    .elementos-login{
+        width: 42%;
+        height: 300px;
+    }
+    .logo-login{
+        width: 45%;
+        height: 300px;
+    }
+}
+/* @media screen max */
+@media screen and (max-width: 600px) {
+    .base-login{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .elementos-login{
+        width: 90%;
+        height: 300px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .logo-login{
+        width: 90%;
+        height: 300px;
+        border-radius: 0px 0px 10px 10px;
+    }
+}
+
