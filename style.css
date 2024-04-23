@@ -55,17 +55,17 @@ body{
 	margin-bottom: 0.5em;
 	color: #191970;
 	font-size: 1em;
-    font-family: "Nunito", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+	font-family: "Nunito", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 	display: block;
 }
 .campo-login input[type="text"], .campo-login input[type="password"]{
 	padding: 0.6em;
 	border: 2.02px solid grey;
-    width: 200px;
+        width: 200px;
 	border-radius: 10px;
-    outline: none;
+        outline: none;
 }
 .campo-login input:focus{
     background-color: #E0E0F8;;
