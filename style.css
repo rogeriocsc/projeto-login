@@ -1,133 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     margin: 0px;
     padding: 0px;
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
+
+body {
+    background-color: #89D99D;
+    font-family: "Poppins", sans-serif;
 }
-.fundo-login{
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: rgba(0, 0, 0, 0.75);
+
+h2 {
+    text-align: center;
+    color: #191970;
+    padding: 20px;
 }
-.base-login{
-    height: 100vh;
+
+main {
+    margin: 20px 5px;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-.elementos-login{
-    width: 34%;
-    height: 350px;
+
+.form_login {
+    width: 900px;
+    height: 420px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.336);
+}
+
+.base {
+    height: 420px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.elementos {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    float: left;
-}
-.logo-login{
-    width: 40%;
-    height: 350px;
-    display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: rgb(253, 6, 6);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    float: right;
 }
-.logo-login img{
-    border-radius: 10px;
+
+.campo {
+    margin-bottom: 20px;
 }
-.campo-login {
-    margin-bottom: 1em;
-}
-.campo-login label {
-	margin-bottom: 0.5em;
+
+.campo label {
+    display: block;
+    margin-bottom: 0.2em;
 	color: #191970;
 	font-size: 1em;
-	font-family: "Nunito", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-	display: block;
 }
-.campo-login input[type="text"], .campo-login input[type="password"]{
-	padding: 0.6em;
-	border: 2.02px solid grey;
-        width: 200px;
-	border-radius: 10px;
-        outline: none;
+
+.campo input[type="text"], .campo input[type="password"] {
+	padding: 0.5em;
+	border: 2px solid #191970;
+    border-radius: 10px;
+    outline: none;
+} 
+
+.campo input:focus {
+	background: #dcdcf3;
+
 }
-.campo-login input:focus{
-    background-color: #E0E0F8;;
+
+img {
+    border-radius: 10px;
 }
-.btn_login{
-    padding: 10px;
-    margin: 5px 4px;
-    width: 100px;
-    background-color: #048;
+
+button {
+    width: 140px;
+    padding: 12px;
+    background-color: red;
     color: white;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: .4s;
     border: none;
+    font-size: 1em;
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: pointer;
 }
-.btn_login:hover{
-    background-color: rgb(33, 113, 194);
+
+button:hover {
+    background-color: rgb(218, 64, 64);
 }
-/* @media screen max */
-@media screen and (max-width: 970px) {
-    .elementos-login{
-        width: 40%;
-        height: 350px;
+
+/* min-width:  */
+@media screen and (max-width: 720px) {
+    .form_login {
+        width: 900px;
+        height: 500px;
+        padding-top: 40px;
     }
-    .logo-login{
-        width: 45%;
-        height: 350px;
+
+    .base {
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
-    .logo-login img{
-        width: 150px;
-        height: 150px;
-    }
-}
-/* @media screen max */
-@media screen and (max-width: 770px) {
-    .elementos-login{
-        width: 42%;
-        height: 300px;
-    }
-    .logo-login{
-        width: 45%;
-        height: 300px;
-    }
-}
-/* @media screen max */
-@media screen and (max-width: 600px) {
-    .base-login{
-        height: 100vh;
+
+    .elementos {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .elementos-login{
-        width: 90%;
-        height: 300px;
-        border-radius: 10px 10px 0px 0px;
-    }
-    .logo-login{
-        width: 90%;
-        height: 300px;
-        border-radius: 0px 0px 10px 10px;
+
+    img {
+        margin-top: 40px;
+        width: 180px;
+        height: 180px;
     }
 }
-
